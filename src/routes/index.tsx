@@ -1,24 +1,75 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { ProductSection } from "@/components/site/ProductSection";
+import { CategoryGrid } from "@/components/site/CategoryGrid";
+import { TrustSection } from "@/components/site/TrustSection";
+import { InstagramSection } from "@/components/site/InstagramSection";
+import { WhyIpurple } from "@/components/site/WhyIpurple";
+import { ExperienceSection } from "@/components/site/ExperienceSection";
+import { CTA } from "@/components/site/CTA";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+import { WhatsAppButton } from "@/components/site/WhatsAppButton";
+import { CONTACT, INSTAGRAM_URL } from "@/config/site";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const TITLE = "IPurple Imports | iPhones e tecnologia em Duque de Caxias";
+const DESCRIPTION =
+  "iPhones, smartphones, Apple Watch, AirPods e acessórios com atendimento especializado na IPurple Imports, em Duque de Caxias - RJ.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Store",
+          name: "IPurple Imports",
+          description: DESCRIPTION,
+          telephone: "+55 21 97180-6102",
+          sameAs: [INSTAGRAM_URL],
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: CONTACT.addressLine1,
+            addressLocality: "Duque de Caxias",
+            addressRegion: "RJ",
+            addressCountry: "BR",
+          },
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="relative min-h-screen overflow-x-hidden">
+      <Navbar />
+      <main>
+        <Hero />
+        <ProductSection />
+        <CategoryGrid />
+        <TrustSection />
+        <InstagramSection />
+        <WhyIpurple />
+        <ExperienceSection />
+        <CTA />
+        <Contact />
+      </main>
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
