@@ -11,7 +11,7 @@ export function WhatsAppButton() {
     >
       <span
         aria-hidden="true"
-        className="animate-ip-pulse absolute inset-0 rounded-full bg-[#25D366]/60"
+        className="absolute inset-0 rounded-full bg-[#25D366]/60"
         style={{ animation: "ip-pulse-ring 2.4s ease-out infinite" }}
       />
       <svg
