@@ -10,8 +10,8 @@ const LINKS = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-border py-12">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:flex-row lg:justify-between lg:text-left">
+    <footer className="relative border-t border-border pb-28 pt-12 lg:pb-12">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:flex-row lg:justify-between lg:pr-24 lg:text-left">
         <div>
           <p className="font-display text-sm font-extrabold tracking-[0.28em] text-gradient">
             {BRAND.logoTop}
