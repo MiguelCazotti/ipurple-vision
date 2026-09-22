@@ -11,11 +11,13 @@ import { CTA } from "@/components/site/CTA";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
+import { ScooterSection } from "@/components/site/ScooterSection";
+import { FacebookVideos } from "@/components/site/FacebookVideos";
 import { CONTACT, INSTAGRAM_URL } from "@/config/site";
 
-const TITLE = "IPurple Imports | iPhones e tecnologia em Duque de Caxias";
+const TITLE = "IPurple Imports | iPhones, tecnologia e scooters elétricas";
 const DESCRIPTION =
-  "iPhones, smartphones, Apple Watch, AirPods e acessórios com atendimento especializado na IPurple Imports, em Duque de Caxias - RJ.";
+  "iPhones, smartphones, acessórios e scooters elétricas com atendimento especializado na IPurple Imports, em Duque de Caxias - RJ.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -59,6 +61,8 @@ function Index() {
       <Navbar />
       <main>
         <Hero />
+        <ScooterSection />
+        <FacebookVideos />
         <ProductSection />
         <CategoryGrid />
         <TrustSection />
