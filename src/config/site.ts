@@ -15,6 +15,8 @@ import catAccessories from "@/assets/cat-accessories.jpg";
 import storeInterior from "@/assets/store-interior.jpg";
 import lifestyleHand from "@/assets/lifestyle-hand.jpg";
 import boxes from "@/assets/boxes.jpg";
+import scooterMello from "@/assets/scooter-mello.jpg";
+import scooterShowroom from "@/assets/scooter-showroom.jpg";
 
 /* ------------------------------------------------------------------ */
 /* Marca e contato                                                     */
@@ -42,6 +44,9 @@ export const INSTAGRAM_URL = "https://www.instagram.com/ipurpleimports";
 export const INSTAGRAM_HANDLE = "@ipurpleimports";
 export const INSTAGRAM_FOLLOWERS = "12,4 mil";
 
+export const FACEBOOK_URL =
+  "https://www.facebook.com/profile.php?id=61556232695254";
+
 export const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=" +
   encodeURIComponent(
@@ -66,8 +71,9 @@ export function whatsappUrlFor(product?: string) {
 export const NAV_LINKS = [
   { label: "Início", href: "#inicio" },
   { label: "iPhones", href: "#iphones" },
+  { label: "Scooters", href: "#scooters" },
+  { label: "Vídeos", href: "#videos" },
   { label: "Smartphones", href: "#categorias" },
-  { label: "Acessórios", href: "#categorias" },
   { label: "Sobre", href: "#sobre" },
   { label: "Contato", href: "#contato" },
 ];
@@ -150,12 +156,50 @@ export const PRODUCTS: Product[] = [
 /* ------------------------------------------------------------------ */
 
 export const CATEGORIES = [
+  { name: "Scooters elétricas", caption: "Mobilidade para o dia a dia", image: scooterShowroom },
   { name: "iPhone", caption: "Linha completa", image: productProMax },
   { name: "Smartphones", caption: "Android premium", image: catSmartphones },
   { name: "Apple Watch", caption: "Saúde e performance", image: catWatch },
   { name: "AirPods", caption: "Áudio sem fio", image: catAirpods },
   { name: "MacBook", caption: "Trabalho e criação", image: catMacbook },
   { name: "Acessórios", caption: "Capas, cabos e carregadores", image: catAccessories },
+];
+
+export const SCOOTERS = [
+  {
+    name: "Scooter Mello 500W",
+    description:
+      "Confortável, econômica e prática para deixar os trajetos do dia a dia mais leves.",
+    specs: ["Motor 500W", "Elétrica", "Uso urbano"],
+    price: "Consulte as condições",
+    image: scooterMello,
+  },
+  {
+    name: "Scooters elétricas",
+    description:
+      "Modelos modernos, silenciosos e sustentáveis para uma nova forma de se movimentar.",
+    specs: ["Mais economia", "Conforto", "Design moderno"],
+    price: "A partir de R$ 4.899,99",
+    image: scooterShowroom,
+  },
+];
+
+export const FACEBOOK_VIDEOS = [
+  {
+    title: "Scooter Mello 500W",
+    description: "Estilo, praticidade e economia para os seus trajetos.",
+    url: "https://www.facebook.com/61556232695254/videos/1385441363767495/",
+  },
+  {
+    title: "Seu novo jeito de se movimentar",
+    description: "Conheça as scooters elétricas disponíveis na IPurple.",
+    url: "https://www.facebook.com/61556232695254/videos/990487003746381/",
+  },
+  {
+    title: "O futuro da mobilidade",
+    description: "Economia, praticidade e liberdade para o seu dia a dia.",
+    url: "https://www.facebook.com/61556232695254/videos/2249116659193481/",
+  },
 ];
 
 /* ------------------------------------------------------------------ */

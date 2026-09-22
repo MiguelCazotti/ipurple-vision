@@ -29,21 +29,21 @@ export function Hero() {
           </span>
 
           <h1 className="mt-6 font-display text-[2.6rem] font-extrabold leading-[1.02] sm:text-6xl lg:text-7xl">
-            Seu próximo
+            Tecnologia que
             <br />
-            <span className="text-gradient">iPhone</span> está
+            <span className="text-gradient">move você</span>
             <br />
-            aqui.
+            para o futuro.
           </h1>
 
           <p className="mx-auto mt-6 max-w-md text-balance text-sm leading-relaxed text-muted-foreground sm:text-base lg:mx-0">
-            Os melhores smartphones, acessórios e experiências em tecnologia, com
-            atendimento de quem entende do assunto.
+            iPhones, eletrônicos e scooters elétricas com atendimento de quem
+            entende do assunto.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
-            <ActionLink href="#iphones" className="w-full sm:w-auto">
-              Ver produtos <ArrowRight className="size-4" />
+            <ActionLink href="#scooters" className="w-full sm:w-auto">
+              Ver scooters <ArrowRight className="size-4" />
             </ActionLink>
             <ActionLink
               href={WHATSAPP_URL}

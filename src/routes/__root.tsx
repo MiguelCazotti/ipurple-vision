@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "IPurple Imports — iPhones, smartphones e acessórios em Duque de Caxias - RJ.",
+          "IPurple Imports — iPhones, smartphones, acessórios e scooters elétricas em Duque de Caxias - RJ.",
       },
       { name: "theme-color", content: "#050507" },
       { property: "og:site_name", content: "IPurple Imports" },
@@ -115,7 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
