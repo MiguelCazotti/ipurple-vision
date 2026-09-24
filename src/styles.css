@@ -9,6 +9,10 @@
  * Estética futurista, escura, com roxo/violeta/azul em detalhes e luzes.
  */
 
+#lovable-badge {
+  display: none !important;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
