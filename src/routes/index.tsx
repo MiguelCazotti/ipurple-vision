@@ -1,12 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowRight, Instagram, MessageCircle, ShieldCheck, MapPin, Play, type LucideIcon } from "lucide-react";
-import ios27IntroAsset from "@/assets/ios27/ios-27-introducao.png.asset.json";
-import ios27PerformanceAsset from "@/assets/ios27/ios-27-desempenho.png.asset.json";
-import ios27GlassAsset from "@/assets/ios27/ios-27-liquid-glass.png.asset.json";
-import ios27SiriAsset from "@/assets/ios27/ios-27-siri-ai.png.asset.json";
-import ios27AppsAsset from "@/assets/ios27/ios-27-apps.png.asset.json";
-import ios27CameraAsset from "@/assets/ios27/ios-27-camera.png.asset.json";
 import sayCellLogoAsset from "@/assets/brand/saycell-logo.jpg.asset.json";
 import storeWheelAsset from "@/assets/store/loja-roleta.png.asset.json";
 import storeShowcaseAsset from "@/assets/store/loja-vitrine-logo.png.asset.json";
@@ -22,9 +16,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "CAZOTTI APPLE — Loja de iPhone em Caxias" },
-      { name: "description", content: "Conheça os iPhones da CAZOTTI APPLE e confira as novas funções do iOS 27." },
+      { name: "description", content: "Conheça os iPhones e modelos disponíveis na CAZOTTI APPLE." },
       { property: "og:title", content: "CAZOTTI APPLE — Loja de iPhone em Caxias" },
-      { property: "og:description", content: "Conheça os iPhones da CAZOTTI APPLE e confira as novas funções do iOS 27." },
+      { property: "og:description", content: "Conheça os iPhones e modelos disponíveis na CAZOTTI APPLE." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -58,15 +52,6 @@ const reels = [
   { label: "Reel 01", url: "https://www.instagram.com/p/DdmVRwAR34J/" },
   { label: "Reel 02", url: "https://www.instagram.com/saycell_/" },
   { label: "Reel 03", url: "https://www.instagram.com/saycell_/" },
-];
-
-const ios27Updates = [
-  { image: ios27IntroAsset.url, alt: "Apresentação das novas funções do iOS 27" },
-  { image: ios27PerformanceAsset.url, alt: "Novidades de desempenho do iPhone no iOS 27" },
-  { image: ios27GlassAsset.url, alt: "Personalização do Liquid Glass no iOS 27" },
-  { image: ios27SiriAsset.url, alt: "Nova experiência da Siri com inteligência artificial" },
-  { image: ios27AppsAsset.url, alt: "Melhorias nos aplicativos do iPhone com iOS 27" },
-  { image: ios27CameraAsset.url, alt: "Novo modo da Siri na câmera do iPhone" },
 ];
 
 const storePhotos = [
@@ -139,7 +124,6 @@ function SayCell() {
           <nav className="hidden gap-7 text-sm text-white/65 md:flex">
             <a href="#loja" className="hover:text-[#e6c86e]">A loja</a>
             <a href="#iphones" className="hover:text-[#e6c86e]">iPhones</a>
-            <a href="#ios-27" className="hover:text-[#e6c86e]">iOS 27</a>
             <a href="#reels" className="hover:text-[#e6c86e]">Reels</a>
             <a href="#contato" className="hover:text-[#e6c86e]">Contato</a>
           </nav>
@@ -224,29 +208,6 @@ function SayCell() {
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="ios-27" className="scroll-mt-20 border-y border-[#d6b35a]/10 bg-[#f3f3f1] py-20 text-[#111111]">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mb-10 max-w-3xl">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[.3em] text-[#8a681f]">Novidades Apple</p>
-            <h2 className="text-3xl font-black leading-tight md:text-5xl">iOS 27: nova atualização do iPhone e suas novas funções.</h2>
-            <p className="mt-4 max-w-2xl text-sm leading-6 text-[#111111]/60">Veja os principais destaques da atualização, com melhorias de desempenho, personalização, aplicativos, câmera e uma nova experiência com a Siri.</p>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {ios27Updates.map((update, index) => (
-              <figure key={update.alt} className="group overflow-hidden rounded-lg border border-[#111111]/10 bg-white shadow-sm">
-                <img src={update.image} alt={update.alt} loading="lazy" className="aspect-square h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]" />
-                <figcaption className="sr-only">Parte {index + 1}: {update.alt}</figcaption>
-              </figure>
-            ))}
-          </div>
-          <div className="mt-9 flex justify-center">
-            <a href="https://www.instagram.com/saycell_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-6 py-3.5 text-sm font-bold text-white hover:bg-[#8a681f]">
-              <Instagram size={17} /> Acompanhe mais novidades
-            </a>
           </div>
         </div>
       </section>
