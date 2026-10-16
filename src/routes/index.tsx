@@ -64,8 +64,8 @@ const trustItems: Array<{ icon: LucideIcon; title: string; text: string }> = [
   { icon: MapPin, title: "Loja física", text: "Volta Redonda" },
 ];
 
-const whatsapp = "https://wa.me/5521979529575?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rei%20do%20Iphone%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20iPhones.";
-const whatsappForIphone = (model: string, color: string) => `https://wa.me/5521979529575?text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre o ${model} na cor ${color}.`)}`;
+const whatsapp = "https://wa.me/5524999680039?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rei%20do%20Iphone%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20iPhones.";
+const whatsappForIphone = (model: string, color: string) => `https://wa.me/5524999680039?text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre o ${model} na cor ${color}.`)}`;
 
 function IphoneCard({ product }: { product: (typeof products)[number] }) {
   const [imageFailed, setImageFailed] = useState(false);
