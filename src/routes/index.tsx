@@ -60,7 +60,7 @@ const storePhotos = [
 
 const trustItems: Array<{ icon: LucideIcon; title: string; text: string }> = [
   { icon: ShieldCheck, title: "5 anos", text: "+ de 7.000 clientes" },
-  { icon: ShieldCheck, title: "6 meses a 1 ano", text: "de garantia" },
+  { icon: ShieldCheck, title: "1 ano", text: "de garantia" },
   { icon: MapPin, title: "Loja física", text: "Volta Redonda" },
 ];
 
