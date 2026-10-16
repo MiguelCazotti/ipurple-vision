@@ -77,7 +77,7 @@ const whatsappForIphone = (model: string, color: string) => `https://wa.me/55219
 function IphoneCard({ product }: { product: (typeof products)[number] }) {
   const [imageFailed, setImageFailed] = useState(false);
   return (
-    <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0d0d0d] hover:border-[#e6c86e]/40">
+    <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0d0d0d] hover:border-[#D1D5DB]/40">
       <div className="relative aspect-[4/4.5] overflow-hidden bg-white">
         {imageFailed ? (
           <div role="img" aria-label={`Ilustração de fallback do ${product.name}`} className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#f8f8f8] to-[#e8e8e8]">
@@ -95,12 +95,12 @@ function IphoneCard({ product }: { product: (typeof products)[number] }) {
       <div className="p-5">
         <div className="flex items-start justify-between gap-3">
           <h3 className="font-bold">{product.name}</h3>
-          <a href={whatsapp} target="_blank" rel="noreferrer" aria-label={`Consultar ${product.name}`} className="shrink-0 rounded-full border border-[#e6c86e]/35 p-2.5 text-[#e6c86e] hover:bg-[#e6c86e] hover:text-black"><ArrowRight size={16} /></a>
+          <a href={whatsapp} target="_blank" rel="noreferrer" aria-label={`Consultar ${product.name}`} className="shrink-0 rounded-full border border-[#D1D5DB]/35 p-2.5 text-[#D1D5DB] hover:bg-[#D1D5DB] hover:text-black"><ArrowRight size={16} /></a>
         </div>
         <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2" aria-label={`Cores disponíveis para ${product.name}`}>
           {product.colors.map((color) => (
             <span key={color.name} className="inline-flex items-center gap-1.5 text-[11px] text-white/55">
-              <a href={whatsappForIphone(product.name, color.name)} target="_blank" rel="noreferrer" aria-label={`Pedir informações sobre ${product.name} na cor ${color.name}`} title={`Consultar ${product.name} — ${color.name}`} className="inline-flex rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6c86e]">
+              <a href={whatsappForIphone(product.name, color.name)} target="_blank" rel="noreferrer" aria-label={`Pedir informações sobre ${product.name} na cor ${color.name}`} title={`Consultar ${product.name} — ${color.name}`} className="inline-flex rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D1D5DB]">
                 <span aria-hidden="true" className="h-4 w-4 rounded-full border border-white/25" style={{ backgroundColor: color.hex }} />
               </a>
               {color.name}
@@ -115,45 +115,45 @@ function IphoneCard({ product }: { product: (typeof products)[number] }) {
 function SayCell() {
   return (
     <main className="min-h-screen bg-[#080808] text-white">
-      <header className="sticky top-0 z-50 border-b border-[#d6b35a]/15 bg-[#080808]/95 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-[#9CA3AF]/15 bg-[#080808]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <a href="#" className="flex items-center gap-3 text-xl font-black tracking-tight" aria-label="CAZOTTI APPLE — início">
-            <img src={sayCellLogoAsset.url} alt="Logo da CAZOTTI APPLE" className="h-11 w-11 rounded-full border border-[#d6b35a]/40 object-cover" />
-            <span className="hidden sm:inline">SAY<span className="text-[#e6c86e]">CELL</span></span>
+            <img src={sayCellLogoAsset.url} alt="Logo da CAZOTTI APPLE" className="h-11 w-11 rounded-full border border-[#9CA3AF]/40 object-cover" />
+            <span className="hidden sm:inline">SAY<span className="text-[#D1D5DB]">CELL</span></span>
           </a>
           <nav className="hidden gap-7 text-sm text-white/65 md:flex">
-            <a href="#loja" className="hover:text-[#e6c86e]">A loja</a>
-            <a href="#iphones" className="hover:text-[#e6c86e]">iPhones</a>
-            <a href="#reels" className="hover:text-[#e6c86e]">Reels</a>
-            <a href="#contato" className="hover:text-[#e6c86e]">Contato</a>
+            <a href="#loja" className="hover:text-[#D1D5DB]">A loja</a>
+            <a href="#iphones" className="hover:text-[#D1D5DB]">iPhones</a>
+            <a href="#reels" className="hover:text-[#D1D5DB]">Reels</a>
+            <a href="#contato" className="hover:text-[#D1D5DB]">Contato</a>
           </nav>
-          <a href={whatsapp} target="_blank" rel="noreferrer" className="rounded-full bg-[#e6c86e] px-5 py-2.5 text-sm font-bold text-black hover:bg-[#f0d98b]">
+          <a href={whatsapp} target="_blank" rel="noreferrer" className="rounded-full bg-[#D1D5DB] px-5 py-2.5 text-sm font-bold text-black hover:bg-[#F3F4F6]">
             WhatsApp
           </a>
         </div>
       </header>
 
-      <section className="relative min-h-[640px] overflow-hidden border-b border-[#d6b35a]/10">
+      <section className="relative min-h-[640px] overflow-hidden border-b border-[#9CA3AF]/10">
         <img src={storeShowcaseAsset.url} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center opacity-60" />
         <div className="absolute inset-0 bg-[#080808]/70" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/30 via-transparent to-[#080808]" />
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-20 text-center md:pb-28 md:pt-28">
-          <img src={sayCellLogoAsset.url} alt="CAZOTTI APPLE" className="mx-auto mb-7 h-32 w-32 rounded-full border border-[#e6c86e]/50 object-cover shadow-2xl md:h-40 md:w-40" />
-          <p className="mb-3 text-xs font-bold uppercase tracking-[.35em] text-[#e6c86e]">CAZOTTI APPLE</p>
+          <img src={sayCellLogoAsset.url} alt="CAZOTTI APPLE" className="mx-auto mb-7 h-32 w-32 rounded-full border border-[#D1D5DB]/50 object-cover shadow-2xl md:h-40 md:w-40" />
+          <p className="mb-3 text-xs font-bold uppercase tracking-[.35em] text-[#D1D5DB]">CAZOTTI APPLE</p>
           <h1 className="mx-auto max-w-3xl text-4xl font-black tracking-tight md:text-6xl">Conectando você ao melhor da Apple.</h1>
           <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-white/55">Loja de iPhone em Caxias.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a href="#iphones" className="inline-flex items-center gap-2 rounded-full bg-[#e6c86e] px-6 py-3.5 text-sm font-bold text-black hover:bg-[#f0d98b]">Ver iPhones <ArrowRight size={17} /></a>
-            <a href="https://www.instagram.com/saycell_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#e6c86e]/30 px-6 py-3.5 text-sm font-bold text-white hover:bg-[#e6c86e]/10"><Instagram size={17} /> @saycell_</a>
+            <a href="#iphones" className="inline-flex items-center gap-2 rounded-full bg-[#D1D5DB] px-6 py-3.5 text-sm font-bold text-black hover:bg-[#F3F4F6]">Ver iPhones <ArrowRight size={17} /></a>
+            <a href="https://www.instagram.com/saycell_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#D1D5DB]/30 px-6 py-3.5 text-sm font-bold text-white hover:bg-[#D1D5DB]/10"><Instagram size={17} /> @saycell_</a>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-[#d6b35a]/10 bg-white/[.015]">
+      <section className="border-b border-[#9CA3AF]/10 bg-white/[.015]">
         <div className="mx-auto grid max-w-6xl gap-px md:grid-cols-3">
           {trustItems.map(({ icon: Icon, title, text }) => (
             <div key={title} className="flex items-center justify-center gap-3 px-5 py-7 text-center">
-              <Icon size={21} className="text-[#e6c86e]" />
+              <Icon size={21} className="text-[#D1D5DB]" />
               <div><p className="font-bold">{title}</p><p className="text-xs text-white/45">{text}</p></div>
             </div>
           ))}
@@ -162,8 +162,8 @@ function SayCell() {
 
       <section id="iphones" className="mx-auto max-w-6xl px-6 py-20">
         <div className="mb-10 flex items-end justify-between gap-4">
-          <div><p className="mb-2 text-xs font-bold uppercase tracking-[.3em] text-[#e6c86e]">Apple</p><h2 className="text-3xl font-black md:text-4xl">Nossos Modelos</h2></div>
-          <a href={whatsapp} target="_blank" rel="noreferrer" className="hidden text-sm font-bold text-[#e6c86e] md:block">Consultar disponibilidade →</a>
+          <div><p className="mb-2 text-xs font-bold uppercase tracking-[.3em] text-[#D1D5DB]">Apple</p><h2 className="text-3xl font-black md:text-4xl">Nossos Modelos</h2></div>
+          <a href={whatsapp} target="_blank" rel="noreferrer" className="hidden text-sm font-bold text-[#D1D5DB] md:block">Consultar disponibilidade →</a>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
@@ -175,33 +175,33 @@ function SayCell() {
       <section id="loja" className="scroll-mt-20 border-b border-border/20 bg-[var(--brand-canvas)] py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto mb-10 max-w-xl text-center md:mb-14">
-            <img src={sayCellLogoAsset.url} alt="CAZOTTI APPLE" className="mx-auto mb-4 h-14 w-14 rounded-full border border-[var(--brand-gold)]/40 object-cover" />
-            <p className="text-xs font-bold uppercase tracking-[.3em] text-[var(--brand-gold)]">CAZOTTI APPLE por dentro</p>
+            <img src={sayCellLogoAsset.url} alt="CAZOTTI APPLE" className="mx-auto mb-4 h-14 w-14 rounded-full border border-[var(--brand-silver)]/40 object-cover" />
+            <p className="text-xs font-bold uppercase tracking-[.3em] text-[var(--brand-silver)]">CAZOTTI APPLE por dentro</p>
             <h2 className="mt-3 text-3xl font-black md:text-4xl">Nosso feed</h2>
             <p className="mt-3 text-sm leading-6 text-foreground/55">Produtos, novidades e o espaço que preparamos para você.</p>
           </div>
 
           <div className="mx-auto grid max-w-md gap-7 md:max-w-none md:grid-cols-2 lg:grid-cols-3">
             {storePhotos.map((photo) => (
-              <article key={photo.alt} className="group overflow-hidden rounded-2xl border border-[var(--brand-gold)]/20 bg-[var(--brand-surface)] shadow-[0_24px_60px_rgba(255,255,255,0.10)]">
+              <article key={photo.alt} className="group overflow-hidden rounded-2xl border border-[var(--brand-silver)]/20 bg-[var(--brand-surface)] shadow-[0_24px_60px_rgba(255,255,255,0.10)]">
                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-foreground/10 px-4 py-3">
                   <div className="flex min-w-0 items-center gap-3">
-                    <img src={sayCellLogoAsset.url} alt="" className="h-9 w-9 shrink-0 rounded-full border border-[var(--brand-gold)]/50 object-cover" />
+                    <img src={sayCellLogoAsset.url} alt="" className="h-9 w-9 shrink-0 rounded-full border border-[var(--brand-silver)]/50 object-cover" />
                     <div className="min-w-0">
                       <p className="truncate text-sm font-bold">saycell_</p>
                       <p className="truncate text-[11px] text-foreground/45">Duque de Caxias</p>
                     </div>
                   </div>
-                  <Instagram size={18} className="shrink-0 text-[var(--brand-gold)]" aria-hidden="true" />
+                  <Instagram size={18} className="shrink-0 text-[var(--brand-silver)]" aria-hidden="true" />
                 </div>
 
                 <div className="relative aspect-[9/16] overflow-hidden bg-background">
                   <img src={photo.image} alt={photo.alt} loading="lazy" className={`h-full w-full object-cover ${photo.position} transition duration-700 group-hover:scale-[1.02]`} />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                    <p className="mb-2 text-[11px] font-bold uppercase tracking-[.2em] text-[var(--brand-gold)]">{photo.tag}</p>
+                    <p className="mb-2 text-[11px] font-bold uppercase tracking-[.2em] text-[var(--brand-silver)]">{photo.tag}</p>
                     <h3 className="max-w-xs text-xl font-semibold leading-tight text-foreground">{photo.title}</h3>
-                    <a href={whatsapp} target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--brand-gold)] px-5 py-3.5 text-xs font-black uppercase text-background transition hover:bg-[var(--brand-cream)]">
+                    <a href={whatsapp} target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--brand-silver)] px-5 py-3.5 text-xs font-black uppercase text-background transition hover:bg-[var(--brand-silver-light)]">
                       Ver disponibilidade <ArrowRight size={15} />
                     </a>
                   </div>
@@ -212,40 +212,40 @@ function SayCell() {
         </div>
       </section>
 
-      <section id="reels" className="border-y border-[#d6b35a]/10 bg-[#0b0b0b] py-20">
+      <section id="reels" className="border-y border-[#9CA3AF]/10 bg-[#0b0b0b] py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-10 text-center">
-            <p className="text-xs font-bold uppercase tracking-[.3em] text-[#e6c86e]">Instagram</p>
+            <p className="text-xs font-bold uppercase tracking-[.3em] text-[#D1D5DB]">Instagram</p>
             <h2 className="mt-2 text-3xl font-black md:text-4xl">Reels da CAZOTTI APPLE</h2>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {reels.map((reel) => (
-              <a key={reel.label} href={reel.url} target="_blank" rel="noreferrer" className="group relative aspect-[9/13] overflow-hidden rounded-2xl border border-[#e6c86e]/20 bg-black">
+              <a key={reel.label} href={reel.url} target="_blank" rel="noreferrer" className="group relative aspect-[9/13] overflow-hidden rounded-2xl border border-[#D1D5DB]/20 bg-black">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(230,200,110,.18),transparent_40%)]" />
                 <div className="relative flex h-full flex-col items-center justify-center gap-5 p-6 text-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#e6c86e] text-black group-hover:scale-110"><Play size={24} fill="currentColor" /></div>
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#D1D5DB] text-black group-hover:scale-110"><Play size={24} fill="currentColor" /></div>
                   <div><p className="text-lg font-bold">{reel.label}</p><p className="mt-1 text-sm text-white/45">@saycell_</p></div>
                 </div>
               </a>
             ))}
           </div>
-          <div className="mt-8 text-center"><a href="https://www.instagram.com/saycell_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-[#e6c86e]"><Instagram size={17} /> Ver Instagram</a></div>
+          <div className="mt-8 text-center"><a href="https://www.instagram.com/saycell_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-[#D1D5DB]"><Instagram size={17} /> Ver Instagram</a></div>
         </div>
       </section>
 
       <section id="contato" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="rounded-3xl border border-[#e6c86e]/20 bg-[#0d0d0d] p-8 text-center md:p-12">
-          <img src={sayCellLogoAsset.url} alt="Logo da CAZOTTI APPLE" className="mx-auto h-28 w-28 rounded-full border border-[#e6c86e]/40 object-cover" />
+        <div className="rounded-3xl border border-[#D1D5DB]/20 bg-[#0d0d0d] p-8 text-center md:p-12">
+          <img src={sayCellLogoAsset.url} alt="Logo da CAZOTTI APPLE" className="mx-auto h-28 w-28 rounded-full border border-[#D1D5DB]/40 object-cover" />
           <h2 className="mt-4 text-3xl font-black">CAZOTTI APPLE</h2>
           <p className="mt-2 text-sm text-white/50">Loja física em Duque de Caxias • Pague só na entrega</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#e6c86e] px-6 py-3.5 text-sm font-black text-black"><MessageCircle size={18} /> WhatsApp</a>
-            <a href="https://www.instagram.com/saycell_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#e6c86e]/30 px-6 py-3.5 text-sm font-black"><Instagram size={18} /> Instagram</a>
+            <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#D1D5DB] px-6 py-3.5 text-sm font-black text-black"><MessageCircle size={18} /> WhatsApp</a>
+            <a href="https://www.instagram.com/saycell_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#D1D5DB]/30 px-6 py-3.5 text-sm font-black"><Instagram size={18} /> Instagram</a>
           </div>
         </div>
       </section>
 
-      <footer className="border-t border-[#d6b35a]/10 py-7 text-center text-xs text-white/35">
+      <footer className="border-t border-[#9CA3AF]/10 py-7 text-center text-xs text-white/35">
         <p>CAZOTTI APPLE • Loja de iPhone em Caxias</p>
         <p className="mt-1">© {new Date().getFullYear()} CAZOTTI APPLE</p>
       </footer>
