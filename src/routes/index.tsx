@@ -135,8 +135,8 @@ function ReiDoIphone() {
       </header>
 
       <section className="relative min-h-[640px] overflow-hidden border-b border-[#9CA3AF]/10">
-        <img src={storeShowcaseAsset.url} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center opacity-60" />
-        <div className="absolute inset-0 bg-[#080808]/70" />
+        <div className="hero-animated-backdrop" aria-hidden="true" />
+
         <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/30 via-transparent to-[#080808]" />
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-20 text-center md:pb-28 md:pt-28">
           <img src={"/logo-rei-do-iphone.png"} alt="Rei do Iphone" className="mx-auto mb-7 h-32 w-32 rounded-full border border-[#D1D5DB]/50 object-cover shadow-2xl md:h-40 md:w-40" />
