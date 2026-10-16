@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowRight, Instagram, MessageCircle, ShieldCheck, MapPin, type LucideIcon } from "lucide-react";
-import sayCellLogoAsset from "@/assets/brand/saycell-logo.jpg.asset.json";
 import storeWheelAsset from "@/assets/store/loja-roleta.png.asset.json";
 import storeShowcaseAsset from "@/assets/store/loja-vitrine-logo.png.asset.json";
 import feedShowcaseOneAsset from "@/assets/store/feed-vitrine-1.png.asset.json";
@@ -12,13 +11,13 @@ import feedServiceAsset from "@/assets/store/feed-atendimento.png.asset.json";
 import feedLaunchesAsset from "@/assets/store/feed-lancamentos.png.asset.json";
 
 export const Route = createFileRoute("/")({
-  component: SayCell,
+  component: ReiDoIphone,
   head: () => ({
     meta: [
-      { title: "CAZOTTI APPLE — Loja de iPhone em Volta Redonda" },
-      { name: "description", content: "Conheça os iPhones e modelos disponíveis na CAZOTTI APPLE." },
-      { property: "og:title", content: "CAZOTTI APPLE — Loja de iPhone em Volta Redonda" },
-      { property: "og:description", content: "Conheça os iPhones e modelos disponíveis na CAZOTTI APPLE." },
+      { title: "Rei do Iphone — Loja de iPhone em Volta Redonda" },
+      { name: "description", content: "Conheça os iPhones e modelos disponíveis na Rei do Iphone." },
+      { property: "og:title", content: "Rei do Iphone — Loja de iPhone em Volta Redonda" },
+      { property: "og:description", content: "Conheça os iPhones e modelos disponíveis na Rei do Iphone." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -49,14 +48,14 @@ const products = [
 ];
 
 const storePhotos = [
-  { image: feedIphonesAsset.url, alt: "iPhones disponíveis na CAZOTTI APPLE", tag: "IPHONES", title: "Escolha seu novo iPhone", position: "object-center" },
-  { image: feedShowcaseOneAsset.url, alt: "Vitrine de produtos Apple da CAZOTTI APPLE", tag: "PRONTA ENTREGA", title: "Tecnologia Apple em um só lugar", position: "object-center" },
+  { image: feedIphonesAsset.url, alt: "iPhones disponíveis na Rei do Iphone", tag: "IPHONES", title: "Escolha seu novo iPhone", position: "object-center" },
+  { image: feedShowcaseOneAsset.url, alt: "Vitrine de produtos Apple da Rei do Iphone", tag: "PRONTA ENTREGA", title: "Tecnologia Apple em um só lugar", position: "object-center" },
   { image: feedShowcaseTwoAsset.url, alt: "Estantes com iPhones e acessórios Apple", tag: "NOSSA VITRINE", title: "Modelos para todos os estilos", position: "object-center" },
   { image: feedLaunchesAsset.url, alt: "Novos modelos de iPhone na loja", tag: "LANÇAMENTOS", title: "As novidades já chegaram", position: "object-center" },
-  { image: feedServiceAsset.url, alt: "Área de atendimento da CAZOTTI APPLE", tag: "ATENDIMENTO", title: "Um espaço feito para você", position: "object-center" },
-  { image: feedEnvironmentAsset.url, alt: "Ambiente interno da loja CAZOTTI APPLE", tag: "NOSSA LOJA", title: "Venha conhecer a CAZOTTI APPLE", position: "object-center" },
-  { image: storeWheelAsset.url, alt: "Espaço da CAZOTTI APPLE com roleta de prêmios", tag: "EXPERIÊNCIA", title: "Sua visita pode valer prêmios", position: "object-center" },
-  { image: storeShowcaseAsset.url, alt: "Vitrine de iPhones e logo da CAZOTTI APPLE", tag: "CAZOTTI APPLE", title: "Conectando você ao melhor da Apple", position: "object-center" },
+  { image: feedServiceAsset.url, alt: "Área de atendimento da Rei do Iphone", tag: "ATENDIMENTO", title: "Um espaço feito para você", position: "object-center" },
+  { image: feedEnvironmentAsset.url, alt: "Ambiente interno da loja Rei do Iphone", tag: "NOSSA LOJA", title: "Venha conhecer a Rei do Iphone", position: "object-center" },
+  { image: storeWheelAsset.url, alt: "Espaço da Rei do Iphone com roleta de prêmios", tag: "EXPERIÊNCIA", title: "Sua visita pode valer prêmios", position: "object-center" },
+  { image: storeShowcaseAsset.url, alt: "Vitrine de iPhones e logo da Rei do Iphone", tag: "Rei do Iphone", title: "Conectando você ao melhor da Apple", position: "object-center" },
 ];
 
 const trustItems: Array<{ icon: LucideIcon; title: string; text: string }> = [
@@ -65,7 +64,7 @@ const trustItems: Array<{ icon: LucideIcon; title: string; text: string }> = [
   { icon: MapPin, title: "Loja física", text: "Volta Redonda" },
 ];
 
-const whatsapp = "https://wa.me/5521979529575?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20SAY%20CELL%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20iPhones.";
+const whatsapp = "https://wa.me/5521979529575?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rei%20do%20Iphone%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20iPhones.";
 const whatsappForIphone = (model: string, color: string) => `https://wa.me/5521979529575?text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre o ${model} na cor ${color}.`)}`;
 
 function IphoneCard({ product }: { product: (typeof products)[number] }) {
@@ -106,14 +105,14 @@ function IphoneCard({ product }: { product: (typeof products)[number] }) {
   );
 }
 
-function SayCell() {
+function ReiDoIphone() {
   return (
     <main className="min-h-screen bg-[#080808] text-white">
       <header className="sticky top-0 z-50 border-b border-[#9CA3AF]/15 bg-[#080808]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <a href="#" className="flex items-center gap-3 text-xl font-black tracking-tight" aria-label="CAZOTTI APPLE — início">
-            <img src={sayCellLogoAsset.url} alt="Logo da CAZOTTI APPLE" className="h-11 w-11 rounded-full border border-[#9CA3AF]/40 object-cover" />
-            <span className="hidden sm:inline">SAY<span className="text-[#D1D5DB]">CELL</span></span>
+          <a href="#" className="flex items-center gap-3 text-xl font-black tracking-tight" aria-label="Rei do Iphone — início">
+            <img src={"/logo-rei-do-iphone.png"} alt="Logo da Rei do Iphone" className="h-11 w-11 rounded-full border border-[#9CA3AF]/40 object-cover" />
+            <span className="hidden sm:inline">Rei do Iphone</span>
           </a>
           <nav className="hidden gap-7 text-sm text-white/65 md:flex">
             <a href="#loja" className="hover:text-[#D1D5DB]">Inicio</a>
@@ -131,8 +130,8 @@ function SayCell() {
         <div className="absolute inset-0 bg-[#080808]/70" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/30 via-transparent to-[#080808]" />
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-20 text-center md:pb-28 md:pt-28">
-          <img src={sayCellLogoAsset.url} alt="CAZOTTI APPLE" className="mx-auto mb-7 h-32 w-32 rounded-full border border-[#D1D5DB]/50 object-cover shadow-2xl md:h-40 md:w-40" />
-          <p className="mb-3 text-xs font-bold uppercase tracking-[.35em] text-[#D1D5DB]">CAZOTTI APPLE</p>
+          <img src={"/logo-rei-do-iphone.png"} alt="Rei do Iphone" className="mx-auto mb-7 h-32 w-32 rounded-full border border-[#D1D5DB]/50 object-cover shadow-2xl md:h-40 md:w-40" />
+          <p className="mb-3 text-xs font-bold uppercase tracking-[.35em] text-[#D1D5DB]">Rei do Iphone</p>
           <h1 className="mx-auto max-w-3xl text-4xl font-black tracking-tight md:text-6xl">Conectando você ao melhor da Apple.</h1>
           <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-white/55">Loja de iPhone em Volta Redonda.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -168,8 +167,8 @@ function SayCell() {
       <section id="loja" className="scroll-mt-20 border-b border-border/20 bg-[var(--brand-canvas)] py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto mb-10 max-w-xl text-center md:mb-14">
-            <img src={sayCellLogoAsset.url} alt="CAZOTTI APPLE" className="mx-auto mb-4 h-14 w-14 rounded-full border border-[var(--brand-silver)]/40 object-cover" />
-            <p className="text-xs font-bold uppercase tracking-[.3em] text-[var(--brand-silver)]">CAZOTTI APPLE por dentro</p>
+            <img src={"/logo-rei-do-iphone.png"} alt="Rei do Iphone" className="mx-auto mb-4 h-14 w-14 rounded-full border border-[var(--brand-silver)]/40 object-cover" />
+            <p className="text-xs font-bold uppercase tracking-[.3em] text-[var(--brand-silver)]">Rei do Iphone por dentro</p>
             <h2 className="mt-3 text-3xl font-black md:text-4xl">Nosso feed</h2>
             <p className="mt-3 text-sm leading-6 text-foreground/55">Produtos, novidades e o espaço que preparamos para você.</p>
           </div>
@@ -179,7 +178,7 @@ function SayCell() {
               <article key={photo.alt} className="group overflow-hidden rounded-2xl border border-[var(--brand-silver)]/20 bg-[var(--brand-surface)] shadow-[0_24px_60px_rgba(255,255,255,0.10)]">
                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-foreground/10 px-4 py-3">
                   <div className="flex min-w-0 items-center gap-3">
-                    <img src={sayCellLogoAsset.url} alt="" className="h-9 w-9 shrink-0 rounded-full border border-[var(--brand-silver)]/50 object-cover" />
+                    <img src={"/logo-rei-do-iphone.png"} alt="" className="h-9 w-9 shrink-0 rounded-full border border-[var(--brand-silver)]/50 object-cover" />
                     <div className="min-w-0">
                       <p className="truncate text-sm font-bold">saycell_</p>
                       <p className="truncate text-[11px] text-foreground/45">Volta Redonda</p>
@@ -207,8 +206,8 @@ function SayCell() {
 
       <section id="contato" className="mx-auto max-w-6xl px-6 py-20">
         <div className="rounded-3xl border border-[#D1D5DB]/20 bg-[#0d0d0d] p-8 text-center md:p-12">
-          <img src={sayCellLogoAsset.url} alt="Logo da CAZOTTI APPLE" className="mx-auto h-28 w-28 rounded-full border border-[#D1D5DB]/40 object-cover" />
-          <h2 className="mt-4 text-3xl font-black">CAZOTTI APPLE</h2>
+          <img src={"/logo-rei-do-iphone.png"} alt="Logo da Rei do Iphone" className="mx-auto h-28 w-28 rounded-full border border-[#D1D5DB]/40 object-cover" />
+          <h2 className="mt-4 text-3xl font-black">Rei do Iphone</h2>
           <p className="mt-2 text-sm text-white/50">Loja física em Volta Redonda • Pague só na entrega</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#D1D5DB] px-6 py-3.5 text-sm font-black text-black"><MessageCircle size={18} /> WhatsApp</a>
@@ -218,8 +217,8 @@ function SayCell() {
       </section>
 
       <footer className="border-t border-[#9CA3AF]/10 py-7 text-center text-xs text-white/35">
-        <p>CAZOTTI APPLE • Loja de iPhone em Volta Redonda</p>
-        <p className="mt-1">© {new Date().getFullYear()} CAZOTTI APPLE</p>
+        <p>Rei do Iphone • Loja de iPhone em Volta Redonda</p>
+        <p className="mt-1">© {new Date().getFullYear()} Rei do Iphone</p>
       </footer>
     </main>
   );
