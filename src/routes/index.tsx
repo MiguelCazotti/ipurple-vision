@@ -116,7 +116,7 @@ function SayCell() {
             <span className="hidden sm:inline">SAY<span className="text-[#D1D5DB]">CELL</span></span>
           </a>
           <nav className="hidden gap-7 text-sm text-white/65 md:flex">
-            <a href="#loja" className="hover:text-[#D1D5DB]">A loja</a>
+            <a href="#loja" className="hover:text-[#D1D5DB]">Inicio</a>
             <a href="#iphones" className="hover:text-[#D1D5DB]">iPhones</a>
             <a href="#contato" className="hover:text-[#D1D5DB]">Contato</a>
           </nav>
