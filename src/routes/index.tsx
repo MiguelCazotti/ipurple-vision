@@ -108,6 +108,15 @@ function IphoneCard({ product }: { product: (typeof products)[number] }) {
 function ReiDoIphone() {
   return (
     <main className="site-particle-bg min-h-screen bg-[#080808] text-white">
+      <div className="logo-bubbles" aria-hidden="true">
+        <span className="logo-bubble logo-bubble-1"><img src="/logo-rei-do-iphone.png" alt="" /></span>
+        <span className="logo-bubble logo-bubble-2"><img src="/logo-rei-do-iphone.png" alt="" /></span>
+        <span className="logo-bubble logo-bubble-3"><img src="/logo-rei-do-iphone.png" alt="" /></span>
+        <span className="logo-bubble logo-bubble-4"><img src="/logo-rei-do-iphone.png" alt="" /></span>
+        <span className="logo-bubble logo-bubble-5"><img src="/logo-rei-do-iphone.png" alt="" /></span>
+        <span className="logo-bubble logo-bubble-6"><img src="/logo-rei-do-iphone.png" alt="" /></span>
+        <span className="logo-bubble logo-bubble-7"><img src="/logo-rei-do-iphone.png" alt="" /></span>
+      </div>
       <header className="sticky top-0 z-50 border-b border-[#9CA3AF]/15 bg-[#080808]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <a href="#" className="flex items-center gap-3 text-xl font-black tracking-tight" aria-label="Rei do Iphone — início">
