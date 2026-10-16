@@ -105,6 +105,7 @@
 .site-particle-bg {
   position: relative;
   isolation: isolate;
+  background-color: #050505;
 }
 
 .site-particle-bg::before,
@@ -142,28 +143,16 @@
 }
 
 @keyframes silver-particle-drift {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 140px 190px;
-  }
+  from { background-position: 0 0; }
+  to { background-position: 140px 190px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .site-particle-bg::before,
-  .site-particle-bg::after {
-    animation: none;
-  }
-}
-
-#lovable-badge {
-  display: none !important;
-}
-
-
-.logo-bubbles {
+.hero-animated-backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 18% 30%, rgba(150, 150, 150, 0.2), transparent 48%),
+   .logo-bubbles {
   position: fixed;
   z-index: 41;
   inset: 0;
@@ -174,43 +163,43 @@
 .logo-bubble {
   position: absolute;
   display: grid;
+  left: -8vw;
   width: var(--bubble-size);
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(226, 232, 240, 0.22);
+  border: 1px solid rgba(226, 232, 240, 0.25);
   border-radius: 9999px;
   background: rgba(203, 213, 225, 0.035);
-  box-shadow: inset 0 0 16px rgba(226, 232, 240, 0.07), 0 0 18px rgba(203, 213, 225, 0.035);
-  opacity: 0.11;
-  animation: logo-bubble-float var(--bubble-duration) ease-in-out infinite alternate;
+  box-shadow: inset 0 0 12px rgba(226, 232, 240, 0.055), 0 0 14px rgba(203, 213, 225, 0.025);
+  opacity: 0.075;
+  animation: apple-logo-drift var(--bubble-duration) linear infinite;
 }
 
 .logo-bubble img {
-  width: 56%;
-  height: 56%;
+  width: 60%;
+  height: 60%;
   border-radius: 9999px;
   object-fit: cover;
   opacity: 0.72;
   mix-blend-mode: screen;
 }
 
-.logo-bubble-1 { --bubble-size: 56px; --bubble-duration: 11s; top: 15%; left: 8%; }
-.logo-bubble-2 { --bubble-size: 38px; --bubble-duration: 14s; top: 28%; right: 13%; animation-delay: -5s; }
-.logo-bubble-3 { --bubble-size: 68px; --bubble-duration: 17s; top: 58%; left: 17%; animation-delay: -8s; }
-.logo-bubble-4 { --bubble-size: 44px; --bubble-duration: 13s; top: 72%; right: 10%; animation-delay: -3s; }
-.logo-bubble-5 { --bubble-size: 34px; --bubble-duration: 16s; top: 43%; left: 48%; animation-delay: -11s; }
-.logo-bubble-6 { --bubble-size: 52px; --bubble-duration: 19s; top: 87%; left: 63%; animation-delay: -6s; }
-.logo-bubble-7 { --bubble-size: 40px; --bubble-duration: 12s; top: 8%; right: 38%; animation-delay: -9s; }
+.logo-bubble-1 { --bubble-size: 30px; --bubble-duration: 32s; top: 13%; animation-delay: -7s; }
+.logo-bubble-2 { --bubble-size: 22px; --bubble-duration: 41s; top: 29%; animation-delay: -24s; }
+.logo-bubble-3 { --bubble-size: 36px; --bubble-duration: 48s; top: 51%; animation-delay: -33s; }
+.logo-bubble-4 { --bubble-size: 24px; --bubble-duration: 37s; top: 69%; animation-delay: -12s; }
+.logo-bubble-5 { --bubble-size: 28px; --bubble-duration: 53s; top: 84%; animation-delay: -42s; }
+.logo-bubble-6 { --bubble-size: 19px; --bubble-duration: 44s; top: 40%; animation-delay: -16s; }
+.logo-bubble-7 { --bubble-size: 32px; --bubble-duration: 35s; top: 94%; animation-delay: -29s; }
 
-@keyframes logo-bubble-float {
-  from { transform: translate3d(0, -9px, 0); }
-  to { transform: translate3d(7px, 13px, 0); }
+@keyframes apple-logo-drift {
+  from { transform: translate3d(-5vw, 0, 0); }
+  to { transform: translate3d(118vw, -7vh, 0); }
 }
 
 @media (max-width: 640px) {
-  .logo-bubble-3 { left: 8%; }
-  .logo-bubble-5 { left: 57%; }
-  .logo-bubble-6 { display: none; }
+  .logo-bubble-5 { display: none; }
+  .logo-bubble-7 { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
