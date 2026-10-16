@@ -152,7 +152,31 @@
   inset: 0;
   background:
     radial-gradient(ellipse at 18% 30%, rgba(150, 150, 150, 0.2), transparent 48%),
-   .logo-bubbles {
+    radial-gradient(ellipse at 82% 68%, rgba(95, 95, 95, 0.18), transparent 46%),
+    linear-gradient(135deg, #050505 5%, #191919 48%, #080808 90%);
+  background-size: 180% 180%;
+  animation: charcoal-wave 24s ease-in-out infinite alternate;
+}
+
+@keyframes charcoal-wave {
+  0% { background-position: 0% 45%; }
+  50% { background-position: 100% 55%; }
+  100% { background-position: 15% 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-particle-bg::before,
+  .site-particle-bg::after,
+  .hero-animated-backdrop {
+    animation: none;
+  }
+}
+
+#lovable-badge {
+  display: none !important;
+}
+
+.logo-bubbles {
   position: fixed;
   z-index: 41;
   inset: 0;
