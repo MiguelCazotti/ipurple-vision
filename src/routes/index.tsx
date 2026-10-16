@@ -107,7 +107,7 @@ function IphoneCard({ product }: { product: (typeof products)[number] }) {
 
 function ReiDoIphone() {
   return (
-    <main className="min-h-screen bg-[#080808] text-white">
+    <main className="site-particle-bg min-h-screen bg-[#080808] text-white">
       <header className="sticky top-0 z-50 border-b border-[#9CA3AF]/15 bg-[#080808]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <a href="#" className="flex items-center gap-3 text-xl font-black tracking-tight" aria-label="Rei do Iphone — início">
