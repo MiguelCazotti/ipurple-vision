@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight, Instagram, MessageCircle, ShieldCheck, MapPin, Play, type LucideIcon } from "lucide-react";
+import { ArrowRight, Instagram, MessageCircle, ShieldCheck, MapPin, type LucideIcon } from "lucide-react";
 import sayCellLogoAsset from "@/assets/brand/saycell-logo.jpg.asset.json";
 import storeWheelAsset from "@/assets/store/loja-roleta.png.asset.json";
 import storeShowcaseAsset from "@/assets/store/loja-vitrine-logo.png.asset.json";
@@ -46,12 +46,6 @@ const products = [
   { name: "iPhone 12 Pro Max", colors: [{ name: "Prateado", hex: "#F0F0F0" }, { name: "Grafite", hex: "#3A3A3C" }, { name: "Dourado", hex: "#D6C7A1" }, { name: "Azul-Pacífico", hex: "#344B64" }], images: { black: "https://cdsassets.apple.com/live/7WUAS350/images/iphone/iphone-12-pro-max/iphone12-pro-max-colors.jpg", white: "https://cdsassets.apple.com/live/7WUAS350/images/iphone/iphone-12-pro-max/iphone12-pro-max-colors.jpg" } },
   { name: "iPhone 12 Pro", colors: [{ name: "Prateado", hex: "#F0F0F0" }, { name: "Grafite", hex: "#3A3A3C" }, { name: "Dourado", hex: "#D6C7A1" }, { name: "Azul-Pacífico", hex: "#344B64" }], images: { black: "https://cdsassets.apple.com/live/7WUAS350/images/iphone/iphone-12-pro/iphone12-pro-colors.jpg", white: "https://cdsassets.apple.com/live/7WUAS350/images/iphone/iphone-12-pro/iphone12-pro-colors.jpg" } },
   { name: "iPhone 12", colors: [{ name: "Preto", hex: "#222222" }, { name: "Branco", hex: "#F5F5F5" }, { name: "Red", hex: "#FC0324" }, { name: "Verde", hex: "#A9B689" }, { name: "Azul", hex: "#A0B4C7" }, { name: "Roxo", hex: "#E6DDEB" }], images: { black: "https://cdsassets.apple.com/live/7WUAS350/images/iphone/2021-iphone12-colors.png", white: "https://cdsassets.apple.com/live/7WUAS350/images/iphone/2021-iphone12-colors.png" } },
-];
-
-const reels = [
-  { label: "Reel 01", url: "https://www.instagram.com/p/DdmVRwAR34J/" },
-  { label: "Reel 02", url: "https://www.instagram.com/saycell_/" },
-  { label: "Reel 03", url: "https://www.instagram.com/saycell_/" },
 ];
 
 const storePhotos = [
@@ -124,7 +118,6 @@ function SayCell() {
           <nav className="hidden gap-7 text-sm text-white/65 md:flex">
             <a href="#loja" className="hover:text-[#D1D5DB]">A loja</a>
             <a href="#iphones" className="hover:text-[#D1D5DB]">iPhones</a>
-            <a href="#reels" className="hover:text-[#D1D5DB]">Reels</a>
             <a href="#contato" className="hover:text-[#D1D5DB]">Contato</a>
           </nav>
           <a href={whatsapp} target="_blank" rel="noreferrer" className="rounded-full bg-[#D1D5DB] px-5 py-2.5 text-sm font-bold text-black hover:bg-[#F3F4F6]">
@@ -209,27 +202,6 @@ function SayCell() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section id="reels" className="border-y border-[#9CA3AF]/10 bg-[#0b0b0b] py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mb-10 text-center">
-            <p className="text-xs font-bold uppercase tracking-[.3em] text-[#D1D5DB]">Instagram</p>
-            <h2 className="mt-2 text-3xl font-black md:text-4xl">Reels da CAZOTTI APPLE</h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {reels.map((reel) => (
-              <a key={reel.label} href={reel.url} target="_blank" rel="noreferrer" className="group relative aspect-[9/13] overflow-hidden rounded-2xl border border-[#D1D5DB]/20 bg-black">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(230,200,110,.18),transparent_40%)]" />
-                <div className="relative flex h-full flex-col items-center justify-center gap-5 p-6 text-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#D1D5DB] text-black group-hover:scale-110"><Play size={24} fill="currentColor" /></div>
-                  <div><p className="text-lg font-bold">{reel.label}</p><p className="mt-1 text-sm text-white/45">@saycell_</p></div>
-                </div>
-              </a>
-            ))}
-          </div>
-          <div className="mt-8 text-center"><a href="https://www.instagram.com/saycell_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-[#D1D5DB]"><Instagram size={17} /> Ver Instagram</a></div>
         </div>
       </section>
 
