@@ -15,9 +15,9 @@ export const Route = createFileRoute("/")({
   component: SayCell,
   head: () => ({
     meta: [
-      { title: "CAZOTTI APPLE — Loja de iPhone em Caxias" },
+      { title: "CAZOTTI APPLE — Loja de iPhone em Volta Redonda" },
       { name: "description", content: "Conheça os iPhones e modelos disponíveis na CAZOTTI APPLE." },
-      { property: "og:title", content: "CAZOTTI APPLE — Loja de iPhone em Caxias" },
+      { property: "og:title", content: "CAZOTTI APPLE — Loja de iPhone em Volta Redonda" },
       { property: "og:description", content: "Conheça os iPhones e modelos disponíveis na CAZOTTI APPLE." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -62,7 +62,7 @@ const storePhotos = [
 const trustItems: Array<{ icon: LucideIcon; title: string; text: string }> = [
   { icon: ShieldCheck, title: "5 anos", text: "+ de 7.000 clientes" },
   { icon: ShieldCheck, title: "6 meses a 1 ano", text: "de garantia" },
-  { icon: MapPin, title: "Loja física", text: "Duque de Caxias" },
+  { icon: MapPin, title: "Loja física", text: "Volta Redonda" },
 ];
 
 const whatsapp = "https://wa.me/5521979529575?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20SAY%20CELL%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20iPhones.";
@@ -134,7 +134,7 @@ function SayCell() {
           <img src={sayCellLogoAsset.url} alt="CAZOTTI APPLE" className="mx-auto mb-7 h-32 w-32 rounded-full border border-[#D1D5DB]/50 object-cover shadow-2xl md:h-40 md:w-40" />
           <p className="mb-3 text-xs font-bold uppercase tracking-[.35em] text-[#D1D5DB]">CAZOTTI APPLE</p>
           <h1 className="mx-auto max-w-3xl text-4xl font-black tracking-tight md:text-6xl">Conectando você ao melhor da Apple.</h1>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-white/55">Loja de iPhone em Caxias.</p>
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-white/55">Loja de iPhone em Volta Redonda.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a href="#iphones" className="inline-flex items-center gap-2 rounded-full bg-[#D1D5DB] px-6 py-3.5 text-sm font-bold text-black hover:bg-[#F3F4F6]">Ver iPhones <ArrowRight size={17} /></a>
             <a href="https://www.instagram.com/saycell_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#D1D5DB]/30 px-6 py-3.5 text-sm font-bold text-white hover:bg-[#D1D5DB]/10"><Instagram size={17} /> @saycell_</a>
@@ -182,7 +182,7 @@ function SayCell() {
                     <img src={sayCellLogoAsset.url} alt="" className="h-9 w-9 shrink-0 rounded-full border border-[var(--brand-silver)]/50 object-cover" />
                     <div className="min-w-0">
                       <p className="truncate text-sm font-bold">saycell_</p>
-                      <p className="truncate text-[11px] text-foreground/45">Duque de Caxias</p>
+                      <p className="truncate text-[11px] text-foreground/45">Volta Redonda</p>
                     </div>
                   </div>
                   <Instagram size={18} className="shrink-0 text-[var(--brand-silver)]" aria-hidden="true" />
@@ -209,7 +209,7 @@ function SayCell() {
         <div className="rounded-3xl border border-[#D1D5DB]/20 bg-[#0d0d0d] p-8 text-center md:p-12">
           <img src={sayCellLogoAsset.url} alt="Logo da CAZOTTI APPLE" className="mx-auto h-28 w-28 rounded-full border border-[#D1D5DB]/40 object-cover" />
           <h2 className="mt-4 text-3xl font-black">CAZOTTI APPLE</h2>
-          <p className="mt-2 text-sm text-white/50">Loja física em Duque de Caxias • Pague só na entrega</p>
+          <p className="mt-2 text-sm text-white/50">Loja física em Volta Redonda • Pague só na entrega</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#D1D5DB] px-6 py-3.5 text-sm font-black text-black"><MessageCircle size={18} /> WhatsApp</a>
             <a href="https://www.instagram.com/saycell_/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#D1D5DB]/30 px-6 py-3.5 text-sm font-black"><Instagram size={18} /> Instagram</a>
@@ -218,7 +218,7 @@ function SayCell() {
       </section>
 
       <footer className="border-t border-[#9CA3AF]/10 py-7 text-center text-xs text-white/35">
-        <p>CAZOTTI APPLE • Loja de iPhone em Caxias</p>
+        <p>CAZOTTI APPLE • Loja de iPhone em Volta Redonda</p>
         <p className="mt-1">© {new Date().getFullYear()} CAZOTTI APPLE</p>
       </footer>
     </main>
